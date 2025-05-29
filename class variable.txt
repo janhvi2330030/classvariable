@@ -1,0 +1,21 @@
+class human:
+  population=0
+  data=[]
+  def __init__(self,name,age,alive=True):
+    self.name = name
+    self.age = age
+    self.alive=alive
+    human.population += 1
+    human.data.append(self.name)
+  def greet(self):
+    print(f'hello my name is {self.name}.good morning')
+  def dead(self): 
+   if self.alive: 
+    print(self.name,'is no more')
+    human.population-=1 
+    self.alive=False
+   else:
+    print('already dead')
+  def child(self,number):
+    human.population += number
+
